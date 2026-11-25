@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #222222;
+    line-height: 1.5;
+}
+
+.header {
+    background-color: #1d3557;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header p {
+    font-size: 14px;
+    margin-top: 4px;
+    color: #dbe4ee;
+}
+
+.navbar {
+    background-color: #457b9d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.navbar a:hover {
+    background-color: #1d3557;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #1d3557;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 6px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid button {
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-grid button {
+    background-color: #1d3557;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.form-grid button:hover {
+    background-color: #457b9d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+}
+
+.workflow {
+    background-color: #eef4f8;
+    padding: 8px 12px;
+    border-left: 4px solid #457b9d;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.report-list {
+    padding-left: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    color: #555555;
+}
+

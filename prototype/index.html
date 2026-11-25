@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinde Recruitment &amp; Placement Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Shinde Recruitment &amp; Placement Management System</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="#candidates">Candidates</a>
+        <a href="#companies">Companies</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#applications">Applications</a>
+        <a href="#interviews">Interviews</a>
+        <a href="#offers">Offers</a>
+        <a href="#placements">Placements</a>
+        <a href="#reports">Reports</a>
+    </nav>
+
+    <main class="container">
+        <section id="candidates" class="card">
+            <h2>1. Candidate Management</h2>
+            <form class="form-grid">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Mobile Number" required>
+                <input type="text" placeholder="Technology (e.g. Python)" required>
+                <input type="number" step="0.01" min="0" max="100" placeholder="Percentage (0-100)" required>
+                <input type="number" placeholder="Passing Year (e.g. 2026)" required>
+                <input type="number" min="0" placeholder="Backlogs (0 or more)" required>
+                <button type="button">Add Candidate</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Technology</th>
+                        <th>Percentage</th>
+                        <th>Year</th>
+                        <th>Backlogs</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CAN1001</td>
+                        <td>Rohan Sharma</td>
+                        <td>Python</td>
+                        <td>78.50%</td>
+                        <td>2026</td>
+                        <td>0</td>
+                        <td>ACTIVE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="companies" class="card">
+            <h2>2. Company Management</h2>
+            <form class="form-grid">
+                <input type="text" placeholder="Company Name" required>
+                <input type="text" placeholder="Location" required>
+                <input type="email" placeholder="Contact Email" required>
+                <input type="text" placeholder="HR Name" required>
+                <button type="button">Add Company</button>
+            </form>
+        </section>
+
+        <section id="jobs" class="card">
+            <h2>3. Job Management</h2>
+            <form class="form-grid">
+                <input type="text" placeholder="Company ID (e.g. CMP101)" required>
+                <input type="text" placeholder="Job Title" required>
+                <input type="text" placeholder="Technology" required>
+                <input type="number" min="1" placeholder="Openings" required>
+                <input type="text" placeholder="Location" required>
+                <input type="number" step="0.01" placeholder="Package (LPA)" required>
+                <input type="number" step="0.01" placeholder="Minimum Percentage" required>
+                <input type="number" placeholder="Passing Year" required>
+                <input type="number" min="0" placeholder="Maximum Backlogs" required>
+                <input type="date" required>
+                <button type="button">Create Job</button>
+            </form>
+        </section>
+
+        <section id="applications" class="card">
+            <h2>4. Eligibility Check &amp; Job Application</h2>
+            <p class="workflow">
+                Workflow: APPLIED &rarr; SHORTLISTED &rarr; INTERVIEW &rarr; SELECTED &rarr; OFFERED &rarr; JOINED
+                (Alternative: REJECTED)
+            </p>
+            <form class="form-grid">
+                <input type="text" placeholder="Candidate ID (e.g. CAN1001)" required>
+                <input type="text" placeholder="Job ID (e.g. JOB101)" required>
+                <button type="button">Check Eligibility</button>
+                <button type="button">Apply for Job</button>
+            </form>
+        </section>
+
+        <section id="interviews" class="card">
+            <h2>5. Interview Management</h2>
+            <form class="form-grid">
+                <input type="text" placeholder="Application ID (e.g. APP501)" required>
+                <input type="text" placeholder="Round (e.g. Technical Round 1)" required>
+                <input type="date" required>
+                <select>
+                    <option>Online</option>
+                    <option>Offline</option>
+                </select>
+                <input type="text" placeholder="Interviewer Name" required>
+                <button type="button">Schedule Interview</button>
+            </form>
+        </section>
+
+        <section id="offers" class="card">
+            <h2>6. Offer Management</h2>
+            <form class="form-grid">
+                <input type="text" placeholder="Application ID" required>
+                <input type="text" placeholder="Designation" required>
+                <input type="number" step="0.01" placeholder="Package (LPA)" required>
+                <input type="date" title="Offer Date" required>
+                <input type="date" title="Joining Date" required>
+                <button type="button">Create Offer</button>
+            </form>
+        </section>
+
+        <section id="placements" class="card">
+            <h2>7. Placement Management</h2>
+            <form class="form-grid">
+                <input type="text" placeholder="Offer ID (e.g. OFF101)" required>
+                <input type="number" step="0.01" placeholder="Final Package (LPA)" required>
+                <input type="date" title="Actual Joining Date" required>
+                <select>
+                    <option>JOINED</option>
+                    <option>NOT_JOINED</option>
+                </select>
+                <button type="button">Record Placement</button>
+            </form>
+        </section>
+
+        <section id="reports" class="card">
+            <h2>8. Reports</h2>
+            <ul class="report-list">
+                <li>Candidates by Technology</li>
+                <li>Open Jobs</li>
+                <li>Applications by Status</li>
+                <li>Company-wise Placements</li>
+                <li>Placed Candidates</li>
+                <li>Unplaced Candidates</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>
