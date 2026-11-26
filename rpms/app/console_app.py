@@ -56,7 +56,7 @@ class ConsoleApp:
             print("8. Reports")
             print("9. Exit")
 
-            choice = input("\nEnter choice: ").strip()
+            choice = input("\nSelect a module (1-9): ").strip()
             if choice == "1":
                 self.candidates_menu()
             elif choice == "2":
@@ -81,7 +81,7 @@ class ConsoleApp:
 
     def candidates_menu(self):
         while True:
-            print("\n--- Candidate Management ---")
+            print("\n--- Candidate Management Menu ---")
             print("1. Add Candidate")
             print("2. Update Candidate")
             print("3. Search Candidate")
@@ -119,7 +119,7 @@ class ConsoleApp:
                     print(f"Candidate Updated: {candidate.candidate_id}")
 
                 elif choice == "3":
-                    keyword = input("Enter Candidate ID / Name / Email / Technology: ").strip()
+                    keyword = input("Search Keyword (ID, Name, Email, or Technology): ").strip()
                     results = self.candidate_service.search_candidates(keyword)
                     self.show_list(results, "No matching candidates found.")
 
@@ -154,7 +154,7 @@ class ConsoleApp:
 
             try:
                 if choice == "1":
-                    name = input("Company Name: ").strip()
+                    name = input("Company Name (Required): ").strip()
                     location = input("Location: ").strip()
                     contact_email = input("Contact Email: ").strip()
                     hr_name = input("HR Name: ").strip()
@@ -193,7 +193,7 @@ class ConsoleApp:
 
     def jobs_menu(self):
         while True:
-            print("\n--- Job Management ---")
+            print("\n--- Job Opening Management ---")
             print("1. Create Job")
             print("2. Update Job")
             print("3. View Open Jobs")
@@ -209,7 +209,7 @@ class ConsoleApp:
                     technology = input("Technology: ").strip()
                     openings = int(input("Openings: ").strip())
                     location = input("Location: ").strip()
-                    package = float(input("Package (LPA): ").strip())
+                    package = float(input("Annual Package (LPA): ").strip())
                     min_percentage = float(input("Minimum Percentage: ").strip())
                     passing_year = int(input("Passing Year: ").strip())
                     max_backlogs = int(input("Maximum Backlogs: ").strip())
@@ -281,7 +281,7 @@ class ConsoleApp:
 
     def applications_menu(self):
         while True:
-            print("\n--- Applications & Eligibility ---")
+            print("\n--- Job Applications & Eligibility Check ---")
             print("1. Check Eligibility")
             print("2. Apply for Job")
             print("3. Update Application Status")
@@ -333,7 +333,7 @@ class ConsoleApp:
 
     def interviews_menu(self):
         while True:
-            print("\n--- Interview Management ---")
+            print("\n--- Interview Scheduling & Feedback ---")
             print("1. Schedule Interview")
             print("2. Record Feedback")
             print("3. View All Interviews")
@@ -399,7 +399,7 @@ class ConsoleApp:
                 if choice == "1":
                     application_id = input("Application ID: ").strip()
                     designation = input("Designation: ").strip()
-                    package = float(input("Package (LPA): ").strip())
+                    package = float(input("Offered Package (LPA): ").strip())
                     offer_date = input("Offer Date (YYYY-MM-DD): ").strip()
                     joining_date = input("Joining Date (YYYY-MM-DD): ").strip()
                     offer = self.offer_service.create_offer(
@@ -462,7 +462,7 @@ class ConsoleApp:
 
     def reports_menu(self):
         while True:
-            print("\n--- Reports ---")
+            print("\n--- Placement & Recruitment Reports ---")
             print("1. Candidates by Technology")
             print("2. Open Jobs")
             print("3. Applications by Status")
